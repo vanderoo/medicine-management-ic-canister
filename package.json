@@ -1,0 +1,25 @@
+{
+  "name": "medicine-management-ic-canister",
+  "version": "1.0.0",
+  "description": "Internet Computer canister for public transportation payment and trip history management.",
+  "main": "index.ts",
+  "scripts": {
+    "start": "dfx start --background",
+    "stop": "dfx stop",
+    "deploy": "dfx deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanderoo/medicine-management-ic-canister.git"
+  },
+  "author": "vanderoo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vanderoo/medicine-management-ic-canister/issues"
+  },
+  "homepage": "https://github.com/vanderoo/medicine-management-ic-canister#readme",
+  "dependencies": {
+    "azle": "^0.19.0",
+    "uuid": "^9.0.1"
+  }
+}

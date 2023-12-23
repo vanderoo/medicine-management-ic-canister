@@ -1,0 +1,7 @@
+service: () -> {
+    addMedicine: (text, text, text) -> ();
+    getAllMedicines: () -> (vec record {id:text; name:text; expirationDate:text; quantity:text}) query;
+    getMedicineInfo: (text) -> (vec record {id:text; name:text; expirationDate:text; quantity:text}) query;
+    removeExpiredMedicines: () -> ();
+    updateMedicineQuantity: (text, text, text) -> ();
+}

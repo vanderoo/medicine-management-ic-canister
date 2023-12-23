@@ -1,3 +1,17 @@
-# Public Transportation Payment Canister
+# Medicine Inventory Canister
 
-This is a smart contract canister for managing payments and trip history in a public transportation system. It allows users to register, check balance, register vehicles, start and end trips, and view trip history.
+This is a canister for managing the inventory of medicines. It provides functionality to add medicines, retrieve medicine information, update medicine quantity, get a list of all medicines, and remove expired medicines.
+
+## Key Features
+
+- **Add Medicine:** Register new medicines with details such as name, quantity, and expiration date.
+
+- **Get Medicine Info:** Retrieve information about a specific medicine, including its ID, name, quantity, and expiration date.
+
+- **Update Medicine Quantity:** Modify the quantity of a registered medicine.
+
+- **Get All Medicines:** Obtain a list of all registered medicines in the inventory.
+
+- **Remove Expired Medicines:** Automatically remove medicines from the inventory that have passed their expiration date.
+
+## Usage
