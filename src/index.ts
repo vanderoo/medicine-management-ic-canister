@@ -25,7 +25,7 @@ export default Canister({
         const existingMedicine = medicines.find((med) => med.name === name && med.expirationDate === expirationDate);
 
         if (existingMedicine) {
-            existingMedicine.quantity = (parseInt(existingMedicine.quantity) + parseInt(quantity)).toString();
+            existingMedicine.quantity = (parseFloat(existingMedicine.quantity) + parseFloat(quantity)).toString();
             console.log(`Updated quantity for existing medicine (${name}, ${expirationDate}) to ${existingMedicine.quantity}`);
         } else {
             const newMedicine: Medicine = { id: uuidv4(), name, quantity, expirationDate };
@@ -33,7 +33,6 @@ export default Canister({
             console.log('Added new medicine:', newMedicine);
         }
     }),
-
 
     getAllMedicines: query([], Vec(Record({
         "id": text,
@@ -46,11 +45,11 @@ export default Canister({
         const medicine = medicines.find((med) => med.name === name && med.expirationDate === expirationDate);
       
         if (medicine) {
-          const currentQuantity = parseInt(medicine.quantity);
-          const soldQuantityInt = parseInt(soldQuantity);
+          const currentQuantity = parseFloat(medicine.quantity);
+          const soldQuantityFloat = parseFloat(soldQuantity);
       
-          if (currentQuantity >= soldQuantityInt && currentQuantity - soldQuantityInt >= 0) {
-            medicine.quantity = (currentQuantity - soldQuantityInt).toString();
+          if (currentQuantity >= soldQuantityFloat) {
+            medicine.quantity = (currentQuantity - soldQuantityFloat).toString();
             console.log(`Updated quantity for ${name} by selling ${soldQuantity}. Remaining quantity: ${medicine.quantity}`);
             
             if (medicine.quantity === '0') {
